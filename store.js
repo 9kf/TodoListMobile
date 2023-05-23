@@ -22,7 +22,7 @@ export const useListStore = create(
       },
       updateItem: (updatedIndex, updatedName) =>
         set((state) => ({
-          items: state.items.map((index, item) => {
+          items: state.items.map((item, index) => {
             if (index === updatedIndex) {
               return updatedName;
             }
